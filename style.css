@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  /* originální shadow */
+  /* --shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
+  --shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075), 0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075), 0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
+
+  --border-radius: 8px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,263 +17,457 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
 }
+
 a {
   text-decoration: none;
-  color: #a3a3a3;
+  color: #fcfcfc;
 }
 
 body {
   background-color: black;
   min-height: 100vh;
   width: 100%;
-}
-
-.wrap {
-  max-width: 1920px;
-  width: 100%;
   margin: 0 auto;
-  /* position: relative*/
-  background-image: url(./obrazky/hero-pozadi.png);
+  overflow-x: hidden;
+  background-image: url(./obrazky/background-fixed.webp);
   background-size: cover;
   background-position: 100%;
   background-attachment: fixed;
 }
 
-.wrap-inner {
-  max-width: 1440px;
+.wrap {
+  display: grid;
+  grid-template-columns: 127px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "aside content";
+  max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
 }
 
-h1,
-h2 {
+.aside {
+  grid-area: aside;
+  position: sticky;
+}
+
+.content {
+  grid-area: content;
+  height: auto;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: grid;
+  gap: 1rem;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+section {
+  height: 100%;
+}
+
+#home,
+#about-me,
+#contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-wrapper,
+.about-me-wrapper,
+.contact-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  pointer-events: none;
+  top: -11px;
+  left: -240px;
+  height: 155%;
+  width: 1920px;
+}
+.container {
+  width: 100%;
+}
+
+.glass-card {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.section-title {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* nasimulování čáry, aby měla stín */
+.section-title:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+
+  /* originální "neoneové " barvy */
+  /* background-color: #fcfcfc;
+  box-shadow: 0 0px 6px #fcfcfc; */
+
+  /* trochu ztlumené barva */
+  background-color: hsl(0, 0%, 89%);
+  box-shadow: 0 0px 6px hsl(0, 0%, 99%);
+  opacity: 0.8;
+}
+
+.section-title.offset-right {
+  margin-right: -4rem;
+}
+
+h1 {
   font-size: 40px;
   font-weight: 400;
-  padding-top: 2rem;
-  /*padding-bottom: 2rem;*/
+  line-height: 1.4;
 }
-/* home section */
 
-#home {
-  min-height: 100vh;
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+strong {
+  font-weight: 630;
+}
+
+/* home section */
+.header {
+  position: relative;
   width: 100%;
-  margin-left: 2rem;
+  aspect-ratio: 5/2;
 }
 
 .nav-bar {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: end;
 }
+
 .nav-list ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
   align-items: center;
   padding: 0px;
   gap: 50px;
-  font-style: normal;
-  font-weight: 400;
   font-size: 24px;
-  line-height: 19px;
+  margin: 0;
   padding-top: 5rem;
 }
+
 .cta {
   padding: 8px 16px;
   color: #1b1b1b;
   margin-right: 110px;
   font-size: 24px;
   background-color: #fcfcfc;
-  border-radius: 8px;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   transition: 0.3s ease;
   transition-property: background-color, color;
   margin: 0;
 }
+
 .cta:hover {
   transition: 0.3s ease;
   border: 1px solid #fcfcfc;
-  filter: drop-shadow(0px 0px 5px #ffffff) drop-shadow(0px 0px 0.66px #ffffff);
+  filter: drop-shadow(0px 0px 3px #ffffff) drop-shadow(0px 0px 0.6px #ffffff);
 }
 
-.glass-background {
-  box-sizing: border-box;
-  width: 100%;
-  height: 495px;
-  /* background: linear-gradient(
-    134.53deg,
-    rgba(166, 166, 166, 0.3) 1.48%,
-    rgba(74, 75, 75, 0.1) 95.05%
-  ); */
-  border-radius: 8px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  display: flex;
-  flex-direction: row;
-  /*margin-top: 120px;*/
-  align-items: flex-start;
-  transform: translateY(25%);
-}
-#home .nadpis {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
-  gap: 1rem;
-  position: relative;
-  z-index: 200;
-  padding-top: 18rem;
-}
 #home h1 {
+  position: absolute;
+  bottom: 84px;
+  right: 96px;
   font-size: 56px;
   font-weight: 300;
   color: #fcfcfc;
   line-height: 2;
-  align-self: flex-end;
 }
 
-.logo-a {
-  height: 744px;
-}
-.logo-z {
-  position: absolute;
-  top: 35%;
-  width: 100%;
-  z-index: 300;
-}
 /* end home section */
 
 /* about me section */
-#about-me {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  font-size: 24px;
-  font-weight: 300;
-  color: #fcfcfc;
-  height: 1080px;
-  margin: 2rem;
-}
-
 #about-me .about-me-top,
-.about-me-bottom {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-  margin: 2rem;
-}
-.about-me-top p {
-  width: 687px;
-  margin-right: 135px;
-  padding-top: 2rem;
-}
-/*#about-me .about-me-bottom {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;*/
-
-#about-me .list li {
-  list-style: none;
-  border: 1px solid #a3a3a3;
-  border-radius: 8px;
-  padding: 9px 22px;
-  width: fit-content;
-  font-weight: 300;
-  font-size: 24px;
-  color: #fcfcfc;
-  box-sizing: border-box;
-  margin: 0.8rem 0;
-}
-#about-me .about-me-foto {
-  transform: translateY(-22%);
-}
-/* end about me section */
-
-.side-menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 117px;
-  position: relative;
-  width: 53px;
-  height: 1024px;
-}
-/* my work section */
-
+.about-me-bottom,
 .my-work-1,
 .my-work-2,
 .my-work-3 {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  font-size: 24px;
-  font-weight: 300;
-  color: #fcfcfc;
-  height: 835px;
   display: flex;
-  position: relative;
-  top: 5rem;
-  margin: 2rem;
-  padding-left: 2rem;
+  gap: 3rem;
 }
-.my-work-left {
-  padding-top: 5rem;
-}
-.my-work-right {
-  padding-top: 8rem;
-  padding-bottom: 10rem;
-}
-.music-app-right {
-  position: relative;
-  left: -26%;
-  top: 15%;
-}
-.container {
-  margin-top: 10rem;
-}
-.contact {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-  font-size: 24px;
-  font-weight: 300;
-  color: #fcfcfc;
-  height: 835px;
 
-  top: 5rem;
-  margin: 2rem;
-  padding-left: 2rem;
-  width: 1064px;
-  height: 654px;
+.about-me-top {
+  /* abychom mohli použít position absolute u fotky */
   position: relative;
-  left: 15%;
+  /* mezera, aby se posunul text níže */
+  margin-bottom: 5rem;
+}
+
+.about-me-top p {
+  /* width: 687px; */
+  margin-right: 145px;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  font-size: 20px;
+  width: 100%;
+  max-width: 45ch; /* 45 znaků */
+}
+
+.about-me-top p:last-child {
+  /* aby poslední paragraph neměl margin */
+  margin-bottom: 0;
+}
+
+#about-me .list ul {
+  padding: 0;
+  margin: 0;
+}
+
+#about-me .list li {
+  list-style: none;
+  /* border: 1px solid #a3a3a3; */
+  /* utlumeno o 30% aby se vyzdvihl více samotný text */
+  border: 1px solid hsl(0, 0%, 34%);
+  border-radius: var(--border-radius);
+  padding: 9px 22px;
+  width: fit-content;
+  font-weight: 300;
+  font-size: 20px;
+  color: #fcfcfc;
+  margin: 0.8rem 0;
+}
+
+#about-me .about-me-foto {
+  /* tohle je sice efektivnější z hlediska zdrojů zařízení (CPU, GPU), 
+  ale nám to trochu rozhazuje ten spodní text, proto předěláno do starší metody */
+  /* transform: translateY(-22%); */
+  position: absolute;
+  top: -8rem;
+  right: -1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* end about me section */
+
+/* my work section */
+#my-work {
+  min-height: 100vh;
+  display: flex;
   flex-direction: column;
-  display: flex;
-  justify-content: center;
+  padding-top: 100px;
+  gap: 200px;
 }
 
+.my-work-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+}
+
+/* posunutí text high fidelity wireframe dolů */
+.my-work-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* design rule: zvýšíme trochu variabilitu přes offsety obrázků */
+
+.wireframe {
+  margin-bottom: -200px;
+}
+
+.wireframe-grid {
+  margin-top: -5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.container {
+  padding: 2rem 4rem;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fcfcfc;
+  /* max-width: 1280px; */
+}
+
+.foodie-right {
+  transform: translateX(-20%);
+}
+
+.wave-right {
+  transform: translateX(-40%);
+}
+
+.foodie-detail {
+  margin-top: 3rem;
+  margin-bottom: -7rem;
+  margin-left: -1rem;
+}
+
+/* end my work section */
+
+/* contact section */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 48px;
+  height: 720px;
+  width: 100%;
+}
 #contact .contact-bottom {
   display: flex;
   margin-top: 2rem;
   gap: 2rem;
+  flex-direction: column;
 }
-
 .cta-phone {
-  border: 1px solid #a3a3a3;
-  border-radius: 8px;
+  border: 1px solid #fcfcfc;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   padding: 8px 16px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 24px;
   color: #fcfcfc;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "menu sloupec2 ddd";
+.cta-phone:hover {
+  transition: 0.3s ease;
+  border: 1px solid #fcfcfc;
+  filter: drop-shadow(0px 0px 6px #ffffff);
 }
 
-.grid-vevnitr-vlevo {
-  grid-area: menu;
+#contact .contact-buttons {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+/* end contact section */
+
+.nav-list li a:hover {
+  transition: 0.3s ease;
+  border-bottom: 1.5px solid #fcfcfc;
+  filter: drop-shadow(0px 0px 6px #ffffff);
+  color: #ffffff;
+}
+
+img {
+  scale: 0.6;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media a:hover {
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 3px #ffffff);
+}
+
+@keyframes fade-in {
+  to {
+    scale: 1;
+    opacity: 100%;
+  }
+}
+
+.side-menu-line {
+  scale: 0.7;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 80vh 750vh;
+}
+
+@keyframes fade-in {
+  to {
+    scale: 1;
+    opacity: 100%;
+  }
+}
+
+/* hovery na <a> kvůli ovládání z klávesnice a jiných zařízení */
+/* .home-icon:hover { */
+
+.menu a:hover {
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 3px #ffffff) drop-shadow(0px 0px 3px #ffffff);
+}
+
+.animation {
+  animation: pohyb 3s infinite;
+}
+@keyframes pohyb {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.logo {
+  animation: showup 22s infinite;
+}
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

@@ -3,191 +3,425 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio ✕ Alina Zastulka</title>
+    <meta
+      name="description"
+      content="Discover the portfolio of Alina Zastulka, a junior UX/UI designer passionate about minimalistic, elegant, and modern design. Explore her projects, learn about her skills, and get in touch for collaboration opportunities."
+    />
+
     <link rel="stylesheet" href="style.css" />
-    <title>Portfolio</title>
   </head>
+
   <body>
     <div class="wrap">
-      <img class="logo-z" src="obrazky/Z_logo_3.svg" alt="" />
-      <div class="wrap-inner">
-        <!-- home section -->
-        <section id="home">
-          <div class="nav-bar">
-            <div class="nav-list">
-              <ul>
-                <div class="undeline">
-                  <li><a href="#">Home</a></li>
+      <div class="aside">
+        <div class="menu">
+          <a href="#home" aria-label="Move to the top of the page"
+            ><img
+              class="home-icon"
+              src="obrazky/side-menu/icon-home-white.svg"
+              alt="Home icon to home section"
+            />
+          </a>
+          <img
+            class="side-menu-line"
+            src="obrazky/side-menu/side-menu-line.svg"
+            alt="side menu slider"
+          />
+          <a href="#contact" aria-label="Move to the contact me section">
+            <img
+              src="obrazky/side-menu/scroll-icon.svg"
+              alt="Scroll icon to contact me section"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="aside-space">
+        <div class="content">
+          <div class="sections">
+            <!-- home section -->
+            <section id="home">
+              <nav class="nav-bar">
+                <div class="nav-list">
+                  <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#my-work">My work</a></li>
+                    <li><a href="#contact">Contact </a></li>
+                  </ul>
                 </div>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">My work</a></li>
-                <li><a href="#">Contact </a></li>
-              </ul>
-            </div>
-            <div class="button">
-              <a href="*" type="button" class="cta"
-                >hi.alinazastulka@gmail.com</a
-              >
-            </div>
-          </div>
-          <div class="glass-background">
-            <h1>
-              ALINA ZASTULKA <br />
-              PORTFOLIO
-            </h1>
-          </div>
-        </section>
-        <!-- end home section -->
-
-        <!-- about me section -->
-        <section id="about-me">
-          <div class="content">
-            <div class="about-me container">
-              <h1 class="section-title">About me</h1>
-              <div class="about-me-top">
-                <p>
-                  I am a junior UX UI designer with a passion for minimalistic,
-                  elegant and modern design that not only catches the eye but
-                  also ensures a positive user experience. I am looking for new
-                  opportunities and experiences that will help me continue to
-                  learn and grow.
-                </p>
-                <img
-                  class="about-me-foto"
-                  src="obrazky/about me_foto.svg"
-                  width="216"
-                  height="330"
-                />
-              </div>
-
-              <div class="about-me-bottom">
-                <div class="about-me-columns">
-                  <h2>UX UI Design</h2>
-                  <div class="list">
-                    <ul>
-                      <li>mood board</li>
-                      <li>user persona</li>
-                      <li>customer journey map</li>
-                      <li>wireframes</li>
-                      <li>mockup & prototypes</li>
-                      <li>html & css</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="about-me-columns">
-                  <h2>Graphics & webdesign</h2>
-                  <div class="list">
-                    <ul>
-                      <li>web administration</li>
-                      <li>corporate design</li>
-                      <li>content creator</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="about-me-column">
-                  <h2>Education</h2>
-                  <div class="list">
-                    <ul>
-                      <li>mood board</li>
-                      <li>user persona</li>
-                      <li>customer journey map</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- end about me section -->
-
-        <!-- my work section -->
-        <section id="my-work">
-          <div class="content">
-            <div class="my-work-1 container">
-              <h1 class="section-title">My work</h1>
-              <div class="my-work-left">
-                <img
-                  class="wireframe"
-                  src="obrazky/my-work/wireframe.svg"
-                  width="545"
-                  height="799"
-                />
-              </div>
-              <div class="my-work-right">
-                <img
-                  class="wireframe-grid"
-                  src="obrazky/my-work/wireframe-grid.svg"
-                  width="509"
-                  height="461"
-                />
-                <h2>High fidelity wireframe</h2>
-              </div>
-            </div>
-          </div>
-          <div class="my-work-2 container">
-            <div class="foodie">
-              <h2>Mockup - food app</h2>
-              <img
-                class="foodie"
-                src="obrazky/my-work/foodie_one.svg"
-                width="1220"
-                height="827"
-              />
-            </div>
-          </div>
-          <div class="my-work-3 container">
-            <div class="music-app-left">
-              <img
-                class="your-wave-1"
-                src="obrazky/my-work/your-wave-1.webp"
-                width="858"
-                height="628"
-              />
-              <h2>Mockup - music app</h2>
-            </div>
-            <div class="music-app-right">
-              <img
-                class="your-wave-2"
-                src="obrazky/my-work/your-wave-2.webp"
-                width="694"
-                height="613"
-              />
-            </div>
-          </div>
-        </section>
-        <!-- end my work section -->
-        <!-- contact section -->
-        <section id="contact">
-          <div class="content">
-            <div class="contact container">
-              <div class="contact-top">
-                <h1>Have a project in mind? <br />Let's make it happen.</h1>
-              </div>
-              <div class="contact-bottom">
                 <div class="button">
-                  <a href="*" type="button" class="cta"
-                    >hi.alinazastulka@gmail.com</a
+                  <a
+                    href="mailto:zastulka.a@gmail.com"
+                    type="button"
+                    class="cta"
+                    >Contact me by e-mail</a
                   >
                 </div>
-                <div class="phone">
-                  <a href="*" type="button" class="cta-phone"
-                    >+420 730 123 456</a
+              </nav>
+              <div class="header-wrapper">
+                <div class="header glass-card">
+                  <svg
+                    class="logo"
+                    width="1440"
+                    height="787"
+                    viewBox="0 0 1440 787"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
+                    <g filter="url(#filter0_dd_0_1)">
+                      <path
+                        d="M-20 151H599.838L374.893 342H1440"
+                        stroke="#FCFCFC"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                      />
+                    </g>
+                    <g filter="url(#filter1_dd_0_1)">
+                      <path
+                        d="M215 509.594L425.643 17L842 786"
+                        stroke="#FCFCFC"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_dd_0_1"
+                        x="-34.82"
+                        y="136.18"
+                        width="1489.64"
+                        height="220.64"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="3.33" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_0_1"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="6.66" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="effect1_dropShadow_0_1"
+                          result="effect2_dropShadow_0_1"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect2_dropShadow_0_1"
+                          result="shape"
+                        />
+                      </filter>
+                      <filter
+                        id="filter1_dd_0_1"
+                        x="200.18"
+                        y="0.236275"
+                        width="656.64"
+                        height="800.584"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="3.33" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_0_1"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="6.66" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="effect1_dropShadow_0_1"
+                          result="effect2_dropShadow_0_1"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect2_dropShadow_0_1"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                  <h1>
+                    ALINA ZASTULKA <br />
+                    PORTFOLIO
+                  </h1>
                 </div>
               </div>
-            </div>
+            </section>
+            <!-- end home section -->
+
+            <!-- about me section -->
+            <section id="about-me">
+              <div class="about-me-wrapper">
+                <div class="about-me container glass-card">
+                  <h1 class="section-title offset-right">How I can help</h1>
+                  <div class="about-me-top">
+                    <div>
+                      <p>
+                        I'm a junior UX/UI designer with a
+                        <strong>passion</strong> for minimalistic, elegant, and
+                        modern design that not only
+                        <strong>catches the eye</strong> but also ensures a
+                        positive user experience.
+                      </p>
+                      <p>
+                        I'm <strong>seeking</strong> new opportunities and
+                        experiences to continue learning and growing in my
+                        field.
+                      </p>
+                    </div>
+                    <img
+                      class="about-me-foto"
+                      src="obrazky/about-me-foto.webp"
+                      width="250"
+                      height="350"
+                    />
+                  </div>
+
+                  <div class="about-me-bottom">
+                    <div class="about-me-columns">
+                      <h2>UX UI Design</h2>
+                      <div class="list">
+                        <ul>
+                          <li>mood board</li>
+                          <li>user persona</li>
+                          <li>customer journey map</li>
+                          <li>wireframes</li>
+                          <li>mockup & prototypes</li>
+                          <li>HTML & CSS</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="about-me-columns">
+                      <h2>Webdesign</h2>
+                      <div class="list">
+                        <ul>
+                          <li>graphics</li>
+                          <li>corporate design</li>
+                          <li>web administration</li>
+                          <li>corporate design</li>
+                          <li>content creator</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="about-me-columns">
+                      <h2>Education</h2>
+                      <div class="education">
+                        <div class="list">
+                          <ul>
+                            <li>UX & UI design / STEP IT Academy</li>
+
+                            <li>Figma MasterClass / Šimon Jůn</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- end about me section -->
+
+            <!-- my work section -->
+            <section id="my-work">
+              <div class="my-work container glass-card">
+                <h1 class="section-title offset-right">My work</h1>
+                <div class="my-work-wrapper">
+                  <div class="my-work-left">
+                    <img
+                      class="wireframe"
+                      src="obrazky/wireframe.webp"
+                      width="520"
+                      height="762"
+                    />
+                  </div>
+                  <div class="my-work-right">
+                    <img
+                      class="wireframe-grid"
+                      src="obrazky/wireframe-grid.webp"
+                      width="509"
+                      height="461"
+                    />
+                    <h2 class="section-title offset-right">
+                      High fidelity wireframe
+                    </h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="my-work container glass-card">
+                <h2 class="section-title offset-right">Mockup — food app</h2>
+                <div class="my-work-wrapper">
+                  <div class="foodie-left">
+                    <img
+                      class="foodie-bg"
+                      src="obrazky/fodie-bg.webp"
+                      width="768"
+                      height="628"
+                    />
+                  </div>
+                  <div class="foodie-right">
+                    <img
+                      class="foodie-detail"
+                      src="obrazky/fodie-detail.webp"
+                      width="569"
+                      height="721"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="my-work container glass-card">
+                <div class="my-work-wrapper">
+                  <div class="wave-left">
+                    <img
+                      class="wave-bg"
+                      src="obrazky/wave-bg.webp"
+                      width="809"
+                      height="628"
+                    />
+                  </div>
+                  <div class="wave-right">
+                    <img
+                      class="wave-detail"
+                      src="obrazky/wave-detail.webp"
+                      width="673"
+                      height="617"
+                    />
+                  </div>
+                </div>
+                <h2 class="section-title offset-right">Mockup — music app</h2>
+              </div>
+              <div class="my-work container glass-card">
+                <h2 class="section-title offset-right">
+                  Mockup — eshop with furniture
+                </h2>
+                <div class="my-work-wrapper">
+                  <img
+                    class="furniture"
+                    src="obrazky/furniture.webp"
+                    width="1040"
+                    height="677"
+                  />
+                </div>
+              </div>
+            </section>
+            <!-- end my work section -->
+
+            <!-- contact section -->
+            <section id="contact">
+              <div class="contact-wrapper">
+                <div class="contact container glass-card">
+                  <div class="contact-top">
+                    <h1>
+                      Have a project in mind? <br />
+                      Let's make it happen.
+                    </h1>
+                  </div>
+                  <div class="contact-bottom">
+                    <div class="contact-buttons">
+                      <div class="button">
+                        <a
+                          href="mailto:zastulka.a@gmail.com"
+                          type="button"
+                          class="cta"
+                          >Contact me by e-mail</a
+                        >
+                      </div>
+                      <div class="phone">
+                        <a
+                          href="tel:+420 730 597 685"
+                          type="button"
+                          class="cta-phone"
+                          >Call me now</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="social-media">
+                    <a
+                      href="https://www.instagram.com/alinazastulka.abstractart/?g=5"
+                      ><img
+                        class="cta-social-media"
+                        src="obrazky/ig-icon.svg"
+                        alt="Alina Zastulka Instagram"
+                        type="button"
+                      />
+                    </a>
+
+                    <a
+                      href="https://cz.linkedin.com/in/alina-zastulka-8b25a5170"
+                    >
+                      <img
+                        class="cta-social-media"
+                        src="obrazky/linkedin-icon.svg"
+                        alt="Alina Zastulka Linkedin"
+                        type="button"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- end contact section -->
           </div>
-        </section>
-        <!-- end contact section -->
+        </div>
       </div>
     </div>
-    <aside>
-      <div class="side-menu">
-        <img src="obrazky/side-menu/icon-home.svg" alt="" />
-        <img src="obrazky/side-menu/menu-line.svg" alt="" />
-        <img src="obrazky/side-menu/menu-line.svg" alt="" />
-        <img src="obrazky/side-menu/menu-line.svg" alt="" />
-        <img src="obrazky/side-menu/scroll-icon.svg" alt="" />
-      </div>
-    </aside>
   </body>
 </html>
