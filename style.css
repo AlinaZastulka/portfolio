@@ -128,9 +128,10 @@ section {
 .section-title:after {
   content: "";
   display: block;
+  position: relative;
   width: 100%;
   height: 2px;
-  bottom: 0;
+  bottom: -3px;
   background-color: hsl(0, 0%, 89%);
   box-shadow: 0 0px 6px hsl(0, 0%, 99%);
   opacity: 0.8;
@@ -194,7 +195,7 @@ strong {
   background-color: #fcfcfc;
   border: 1px solid transparent;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow)*/
   transition: 0.3s ease;
   transition-property: background-color, color;
   margin: 0;
@@ -204,13 +205,7 @@ strong {
 .cta:hover {
   transition: 0.3s ease;
   border: 1px solid #fcfcfc;
-  filter: drop-shadow(0px 0px 3px #ffffff) drop-shadow(0px 0px 0.6px #ffffff);
-}
-
-.cta-cv:hover {
-  transition: 0.3s ease;
-  border: 1px solid #fcfcfc;
-  filter: drop-shadow(0px 0px 3px #ffffff) drop-shadow(0px 0px 0.6px #ffffff);
+  filter: drop-shadow(0px 0px 6px #ffffff) drop-shadow(0px 0px 3px #ffffff);
 }
 
 #home h1 {
@@ -293,12 +288,17 @@ strong {
   color: #1b1b1b;
   background-color: #fcfcfc;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  /*box-shadow: var(--shadow)*/
   transition: 0.3s ease;
   transition-property: background-color, color;
   font-weight: 450;
   padding: 9px 22px;
   font-size: 20px;
+}
+
+.cta-cv:hover {
+  transition: 0.3s ease;
+  filter: drop-shadow(0px 0px 3px #ffffff) drop-shadow(0px 0px 1.5px #ffffff);
 }
 
 #about-me .about-me-foto {
@@ -387,7 +387,7 @@ strong {
 .cta-phone {
   border: 1px solid #fcfcfc;
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow)*/
   padding: 8px 16px;
   font-weight: 400;
   font-size: 24px;
@@ -408,13 +408,6 @@ strong {
 }
 
 /* end contact section */
-
-.nav-list li a:hover {
-  transition: 0.3s ease;
-  border-bottom: 1.5px solid #fcfcfc;
-  filter: drop-shadow(0px 0px 6px #ffffff);
-  color: #ffffff;
-}
 
 img {
   scale: 0.6;
@@ -477,10 +470,23 @@ img {
     transform: translateY(0);
   }
 }
-.logo {
-  animation: showup 22s infinite;
+
+.foodie-bg,
+.wave-bg {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 }
-@keyframes showup {
+
+/* animace úvodu */
+
+.logo {
+  --showup-delay: 10s;
+
+  animation: logo-intro 1s ease-in,
+    logo-showup 22s infinite var(--showup-delay) alternate;
+}
+
+@keyframes logo-showup {
   0% {
     opacity: 0;
   }
@@ -494,8 +500,86 @@ img {
     opacity: 0;
   }
 }
-.foodie-bg,
-.wave-bg {
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+.logo-first path,
+.logo-second path {
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 9999;
+  animation: dash 4s linear forwards;
+}
+
+.logo-second path {
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+@keyframes dash {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 1000;
+  }
+}
+
+.nav-bar,
+.aside {
+  opacity: 0;
+  animation: intro-home 1s ease-in 1s forwards;
+}
+
+@keyframes intro-home {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#home .header.glass-card {
+  box-shadow: none;
+  backdrop-filter: none;
+
+  animation: intro-card 1s ease-in 0s forwards;
+}
+
+@keyframes intro-card {
+  from {
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+  to {
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* animace navbaru po najetí myší */
+.nav-list li a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-list li a:hover {
+  filter: drop-shadow(0px 1px 6px #ffffff);
+}
+
+.nav-list li a:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  border-bottom: 2px solid #fcfcfc;
+  animation: navbar-border 0.225s linear forwards;
+}
+
+@keyframes navbar-border {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
