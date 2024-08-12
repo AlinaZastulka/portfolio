@@ -28,8 +28,8 @@
   --underline-shadow: 0 0px 6px hsl(0, 0%, 99%);
   --primary-cta-hover-shadow: drop-shadow(0px 0px 6px #ffffff)
     drop-shadow(0px 0px 3px #ffffff);
-  --secondary-cta-hover-shadow: drop-shadow(0px 0px 3px #ffffff)
-    drop-shadow(0px 0px 1.5px #ffffff);
+  --secondary-cta-hover-shadow: drop-shadow(0px 0px 1.5px #ffffff)
+    drop-shadow(0px 0px 1px #ffffff);
   --links-hover-shadow: drop-shadow(0px 0px 6px #ffffff);
 
   --border-radius: 8px;
@@ -619,7 +619,7 @@ img {
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     box-shadow: var(--shadow);
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
     -webkit-backdrop-filter: blur(10px) !important;
     backdrop-filter: blur(10px) !important;
   }
@@ -644,7 +644,7 @@ img {
     left: -160px;
     box-shadow: var(--shadow);
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
     -webkit-backdrop-filter: blur(10px) !important;
     backdrop-filter: blur(10px) !important;
     transition: transform 0.5s;
@@ -737,6 +737,10 @@ img {
     --primary-button-size: 20px;
     --navbar-size: 20px;
     --primary-button-size: 18px;
+  }
+
+  body {
+    background-image: url(./obrazky/background\ mobile.png);
   }
   .col-bottom {
     grid-template-columns: 1fr;
