@@ -138,6 +138,12 @@ section {
 
 .header {
   position: relative;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
   width: 100%;
   height: 60%;
 }
