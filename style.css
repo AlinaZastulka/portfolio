@@ -115,16 +115,6 @@ section {
   /* justify-content: center; */
 }
 
-/* #home-top {
-  height: 20%;
-} */
-
-/* #about-me,
-#my-work,
-#contact {
-  padding-top: 4rem;
-} */
-
 .glass-card {
   padding: var(--spacing-xl);
   border-radius: var(--border-radius);
@@ -138,7 +128,6 @@ section {
 }
 
 .header {
-  /* position: relative; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -211,7 +200,6 @@ strong {
 
 svg {
   max-width: 100%;
-  /* height: 150%; */
   transform: translate(3.5rem, 5rem);
 }
 
@@ -222,7 +210,8 @@ svg {
   justify-content: space-between;
   align-items: end;
   flex-wrap: wrap;
-  /* padding-top: 3rem; */
+  position: relative;
+  z-index: 3000;
 }
 
 .nav-list ul {
@@ -349,7 +338,6 @@ svg {
 /* CONTACT SECTION */
 #contact {
   height: 90svh;
-  /* margin-bottom: var(--spacing-xxl); */
 }
 #contact > .glass-card {
   display: flex;
@@ -608,10 +596,9 @@ img {
     --spacing-xxl: 46px;
   }
 
-  /* .nav-bar {
-    height: 50px;
-
-  } */
+  .aside {
+    display: none;
+  }
 
   main {
     grid-template-columns: 5% 90% 5%;
@@ -626,11 +613,8 @@ img {
   main {
     grid-template-columns: 1% 98% 1%;
   }
-  /* .content {
-    max-width: 90%;
-  } */
+
   #home {
-    /* padding: 0 var(--spacing-xl); */
     height: 90svh;
     margin-top: 10vh;
   }
@@ -716,7 +700,6 @@ img {
   }
   section {
     margin: 0 0 2rem 0;
-    /* padding: 0 var(--spacing-xl); */
   }
 
   .col-top p {
@@ -777,9 +760,7 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
-  /* col-top img {
-    max-width: 80px;
-  } */
+
   .offset-top {
     transform: none;
     margin: 1rem 0 1rem 0;
@@ -798,8 +779,5 @@ img {
   #contact {
     padding-top: 0;
   }
-  /* .glass-card {
-    padding: var(--spacing-m) var(--spacing-xl);
-  } */
 }
 /* KONEC RESPONZIVITA */
