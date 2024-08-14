@@ -60,7 +60,7 @@ body {
   background-color: black;
   margin: 0 auto;
   overflow-x: hidden;
-  /* background-image: url(./obrazky/background.png); */
+  background-image: url(./obrazky/background.png);
   background-size: cover;
   background-position: 100%;
   background-attachment: fixed;
@@ -750,9 +750,9 @@ img {
     --primary-button-size: 18px;
   }
 
-  body {
+  /* body {
     background-image: url(./obrazky/background\ mobile.png);
-  }
+  } */
   .col-bottom {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
