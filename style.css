@@ -493,7 +493,7 @@ img {
   }
 }
 
-.header-small {
+/* .header-small {
   animation: showup 22s infinite;
 }
 @keyframes showup {
@@ -509,7 +509,7 @@ img {
   100% {
     opacity: 0;
   }
-}
+} */
 
 .nav-bar,
 .aside {
