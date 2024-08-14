@@ -155,7 +155,7 @@ section {
   -webkit-backdrop-filter: blur(10px) !important;
   backdrop-filter: blur(10px) !important;
   width: 100%;
-  height: 90%;
+  height: 80%;
   /* display: flex;
   justify-content: center;
   align-items: center;
@@ -726,6 +726,9 @@ img {
     --font-wight: 400;
   }
 
+  .nav-bar {
+    height: 60px;
+  }
   svg {
     display: none;
   }
@@ -735,11 +738,10 @@ img {
   }
   h1 {
     color: #fcfcfc;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 200;
-    line-height: var(--text-height);
+    line-height: 1.7;
     margin: 0;
-    filter: var(--links-hover-shadow);
   }
   .section-title.offset-right {
     margin-right: 0;
