@@ -64,7 +64,7 @@ body {
   background-size: cover;
   background-position: 100%;
   background-attachment: fixed;
-  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   color: var(--text-light);
 }
@@ -96,7 +96,7 @@ main {
   grid-area: content;
   height: auto;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 95%;
 }
 section {
   width: 100%;
@@ -624,23 +624,26 @@ img {
 
 @media only screen and (max-width: 941px) {
   main {
-    grid-template-columns: none;
+    grid-template-columns: 1% 98% 1%;
   }
-  .content {
-    max-width: 100%;
-  }
+  /* .content {
+    max-width: 90%;
+  } */
   #home {
-    padding: 0 var(--spacing-xl);
+    /* padding: 0 var(--spacing-xl); */
+    height: 90svh;
+    margin-top: 10vh;
   }
   .nav-bar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    right: 0;
     left: 0;
     z-index: 1000;
     margin: 0;
     padding-right: var(--spacing-xl);
     padding-left: var(--spacing-xl);
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
+
     box-shadow: var(--shadow);
     backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.3) !important;
@@ -713,7 +716,7 @@ img {
   }
   section {
     margin: 0 0 2rem 0;
-    padding: 0 var(--spacing-xl);
+    /* padding: 0 var(--spacing-xl); */
   }
 
   .col-top p {
@@ -795,8 +798,8 @@ img {
   #contact {
     padding-top: 0;
   }
-  .glass-card {
+  /* .glass-card {
     padding: var(--spacing-m) var(--spacing-xl);
-  }
+  } */
 }
 /* KONEC RESPONZIVITA */
