@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --text-light: #fcfcfc;
@@ -261,7 +260,8 @@ svg {
   border: 1px solid transparent;
   border-radius: var(--border-radius);
   transition: 0.3s ease;
-  transition-property: filter;
+
+  /* transition-property: filter; */
 }
 .primary-cta:hover,
 .secondary-cta:hover {
@@ -387,7 +387,7 @@ svg {
   }
   to {
     transform: scaleX(0);
-    opacity: 0;
+    opacity: 0.01;
   }
 }
 
@@ -403,7 +403,7 @@ svg {
 
 img {
   scale: 0.6;
-  opacity: 0;
+  opacity: 0.01;
   animation: fade-in linear forwards;
   animation-timeline: view();
   animation-range: entry;
@@ -416,9 +416,11 @@ img {
   }
 }
 
+
+
 .side-menu-line {
   scale: 0.7;
-  opacity: 0;
+  opacity: 0,01;
   animation: fade-in linear forwards;
   animation-timeline: view();
   animation-range: 80vh 750vh;
@@ -430,6 +432,7 @@ img {
     opacity: 100%;
   }
 }
+
 
 /* .home-icon:hover { */
 
@@ -455,11 +458,13 @@ img {
 
   animation: logo-intro 1s ease-in;
   /* logo-showup 22s infinite var(--showup-delay) alternate; */
+
+  will-change: opacity;
 }
 
 /* @keyframes logo-showup {
   0% {
-    opacity: 0;
+    opacity: 0.01;
   }
   20% {
     opacity: 1;
@@ -468,7 +473,7 @@ img {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.01;
   }
 } */
 .logo-first path,
@@ -479,26 +484,36 @@ img {
 }
 
 .logo-second path {
-  opacity: 0;
+  /* opacity: 0.01; */
   animation-delay: 0.5s;
+  will-change: opacity;
+
+  /* oprava tečky */
+  transform: translate(-30px, 0px);
 }
 
 @keyframes dash {
   from {
+    transform: translate(0px, 0px);
+    opacity: 0.01;
+  }
+  40% {
     opacity: 1;
   }
   to {
     opacity: 1;
     stroke-dashoffset: 1000;
+    transform: translate(0px, 0px);
   }
 }
 
 .header-small {
+  will-change: opacity;
   animation: showup 22s infinite;
 }
 @keyframes showup {
   0% {
-    opacity: 0;
+    opacity: 0.01;
   }
   20% {
     opacity: 1;
@@ -507,21 +522,25 @@ img {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 0.01;
   }
 }
 
 .nav-bar,
 .aside {
-  opacity: 0;
+  /* opacity: 0.01; */
   animation: intro-home 1s ease-in 1s forwards;
+  will-change: auto;
+  visibility: hidden;
 }
 
 @keyframes intro-home {
   from {
-    opacity: 0;
+    visibility: visible;
+    opacity: 0.01;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -576,7 +595,7 @@ img {
 }
 
 /* RESPONZIVITA */
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1300px) {
   .aside {
     display: none;
   }
@@ -750,9 +769,9 @@ img {
     --primary-button-size: 18px;
   }
 
-  /* body {
+   body {
     background-image: url(./obrazky/background\ mobile.png);
-  } */
+  }
   .col-bottom {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;

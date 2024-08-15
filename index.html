@@ -10,7 +10,16 @@
       content="Discover the portfolio of Alina Zastulka, a junior UX/UI designer passionate about minimalistic, elegant, and modern design. Explore her projects, learn about her skills, and get in touch for collaboration opportunities."
     />
 
-    <link rel="stylesheet" href="style.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.min.css" />
   </head>
   <body>
     <main>
@@ -27,6 +36,7 @@
             class="side-menu-line"
             src="obrazky/side-menu/Line 17.svg"
             alt="side menu slider"
+            loading="lazy"
           />
           <a href="#contact" aria-label="Move to the contact me section">
             <img
@@ -54,8 +64,8 @@
             </ul>
           </div>
 
-          <a href="mailto:alinazastulka@seznam.cz">
-            <button class="primary-cta">Kontaktujte mě</button>
+          <a href="mailto:alinazastulka@seznam.cz" class="primary-cta">
+            Kontaktujte mě
           </a>
         </nav>
         <!-- home section -->
@@ -294,12 +304,18 @@
                 </p>
               </div>
               <div>
-                <img
-                  loading="lazy"
-                  class="about-me-foto offset-top"
-                  src="obrazky/about-me-foto.webp"
-                  alt="alina zastulka foto"
-                />
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcset="obrazky/about-me-foto.avif"
+                  />
+                  <img
+                    loading="lazy"
+                    class="about-me-foto offset-top"
+                    src="obrazky/about-me-foto.webp"
+                    alt="alina zastulka foto"
+                  />
+                </picture>
               </div>
             </div>
             <div class="col-bottom">
@@ -377,20 +393,29 @@
             <h2 class="section-title offset-right">Moje práce</h2>
             <div class="two-column">
               <div class="my-work-left">
-                <img
-                  loading="lazy"
-                  class="wireframe"
-                  src="obrazky/wireframe.webp"
-                  alt="wireframe obrázek"
-                />
+                <picture>
+                  <source type="image/avif" srcset="obrazky/wireframe.avif" />
+                  <img
+                    loading="lazy"
+                    class="wireframe"
+                    src="obrazky/wireframe.webp"
+                    alt="wireframe obrázek"
+                  />
+                </picture>
               </div>
               <div class="my-work-right">
-                <img
-                  loading="lazy"
-                  class="wireframe-grid offset-top"
-                  src="obrazky/wireframe-grid.webp"
-                  alt="wireframe grid obrázek"
-                />
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcset="obrazky/wireframe-grid.avif"
+                  />
+                  <img
+                    loading="lazy"
+                    class="wireframe-grid offset-top"
+                    src="obrazky/wireframe-grid.webp"
+                    alt="wireframe grid obrázek"
+                  />
+                </picture>
                 <h3 class="section-title offset-right">
                   High fidelity wireframe
                 </h3>
@@ -406,20 +431,29 @@
             </h3>
             <div class="two-column">
               <div class="foodie-left">
-                <img
-                  loading="lazy"
-                  class="foodie-bg"
-                  src="obrazky/fodie-bg.webp"
-                  alt="foodie aplikace na objednání jídla"
-                />
+                <picture>
+                  <source type="image/avif" srcset="obrazky/fodie-bg.avif" />
+                  <img
+                    loading="lazy"
+                    class="foodie-bg"
+                    src="obrazky/fodie-bg.webp"
+                    alt="foodie aplikace na objednání jídla"
+                  />
+                </picture>
               </div>
               <div class="foodie-right">
-                <img
-                  loading="lazy"
-                  class="foodie-detail offset-left"
-                  src="obrazky/fodie-detail.webp"
-                  alt="foodie aplikace na objednání jídla detail"
-                />
+                <picture>
+                  <source
+                    type="image/avif"
+                    srcset="obrazky/fodie-detail.avif"
+                  />
+                  <img
+                    loading="lazy"
+                    class="foodie-detail offset-left"
+                    src="obrazky/fodie-detail.webp"
+                    alt="foodie aplikace na objednání jídla detail"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -436,7 +470,7 @@
                 <img
                   loading="lazy"
                   class="wave-bg"
-                  src="obrazky/wave-bg 1.webp"
+                  src="obrazky/wave-bg.webp"
                   alt="yourWAVE hudební aplikace"
                 />
               </div>
@@ -456,11 +490,13 @@
             <h3 class="section-title offset-right">
               E-shop NIKE - product page
             </h3>
-            <img
-              class="nike"
-              src="obrazky/eshop nike.webp"
-              alt="Nike eshop product page"
-            />
+            <picture>
+              <source type="image/avif" srcset="obrazky/eshop-nike.avif" />
+              <img
+                class="nike"
+                src="obrazky/eshop-nike.webp"
+                alt="Nike eshop product page"
+            /></picture>
           </div>
         </section>
         <section>
@@ -468,11 +504,14 @@
             <h3 class="section-title offset-right">
               E-shop s nábytkem - landing page
             </h3>
-            <img
-              class="furniture"
-              src="obrazky/eshop furniture.webp"
-              alt="eshop s nábytkem landing page"
-            />
+            <picture>
+              <source type="image/avif" srcset="obrazky/eshop-furniture.avif" />
+              <img
+                class="furniture"
+                src="obrazky/eshop-furniture.webp"
+                alt="eshop s nábytkem landing page"
+              />
+            </picture>
           </div>
         </section>
         <section>
@@ -491,11 +530,17 @@
             <h3 class="section-title offset-right">
               Infografika - služby oddělení
             </h3>
-            <img
-              class="infografika"
-              src="obrazky/infografika sluzby.webp"
-              alt="infografika služby oddělení"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                srcset="obrazky/infografika-sluzby.avif"
+              />
+              <img
+                class="infografika"
+                src="obrazky/infografika-sluzby.webp"
+                alt="infografika služby oddělení"
+              />
+            </picture>
           </div>
         </section>
         <!-- end my work section -->
@@ -509,11 +554,13 @@
               <strong>Ozvěte se.</strong>
             </h2>
             <span class="contact-bottom">
-              <a href="mailto:alinazastulka@seznam.cz">
-                <button class="primary-cta">alinazastulka@seznam.cz</button></a
+              <a href="mailto:alinazastulka@seznam.cz" class="primary-cta"
+                >alinazastulka@seznam.cz</a
               >
-              <a href="https://www.linkedin.com/in/alina-zastulka">
-                <button class="primary-cta">LinkedIn</button></a
+              <a
+                href="https://www.linkedin.com/in/alina-zastulka"
+                class="primary-cta"
+                >LinkedIn</a
               >
             </span>
           </div>
@@ -521,6 +568,8 @@
         <!-- end contact section -->
       </div>
     </main>
-    <script src="style.js"></script>
+    <!-- <script src="script.js" defer></script> -->
+    <script src="script.min.js" defer></script>
+
   </body>
 </html>
